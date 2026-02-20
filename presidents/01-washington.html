@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ג'ורג' וושינגטון - מחקר מעמיק מורחב</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Inter:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Assistant', 'Inter', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            -webkit-tap-highlight-color: transparent;
+            line-height: 1.7;
+        }
+
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(15, 23, 42, 0) 100%);
+            border-right: 4px solid #38bdf8;
+        }
+
+        .deep-dive-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid #1e293b;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="pb-24">
+
+    <!-- Header Navigation -->
+    <nav class="sticky top-0 z-50 glass-effect p-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-sky-400 font-bold text-sm flex items-center gap-2">
+                <span class="lang-he">← חזרה לאינדקס</span>
+                <span class="lang-en hidden">Back to Index →</span>
+            </a>
+            <button onclick="toggleLanguage()" id="langToggle" class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold border border-slate-700 transition-all active:scale-95">
+                English
+            </button>
+        </div>
+    </nav>
+
+    <main class="p-6 md:p-12 max-w-5xl mx-auto animate-in fade-in duration-700">
+        
+        <!-- Identity Header -->
+        <header class="mb-16">
+            <div class="flex flex-col gap-2 mb-6">
+                <span class="text-sky-400 font-mono text-xs tracking-[0.3em] uppercase font-bold">President #01</span>
+                <h1 class="text-4xl md:text-8xl font-bold text-white leading-tight tracking-tighter">
+                    <span class="lang-he">ג'ורג' וושינגטון</span>
+                    <span class="lang-en hidden">George Washington</span>
+                </h1>
+            </div>
+
+            <!-- Essential Info Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-900/80 p-8 rounded-[2rem] border border-slate-800 shadow-2xl">
+                <div>
+                    <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">שנות כהונה</span>
+                    <span class="text-white font-bold text-base">1789–1797</span>
+                </div>
+                <div>
+                    <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">שנות חיים</span>
+                    <span class="text-white font-bold text-sm">1732–1799</span>
+                </div>
+                <div>
+                    <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">מקום לידה</span>
+                    <span class="text-white font-bold text-sm">וירג'יניה</span>
+                </div>
+                <div>
+                    <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">מפלגה</span>
+                    <span class="text-white font-bold text-sm">עצמאי</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="space-y-20">
+
+            <!-- א. אטימולוגיה מורחבת -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
+                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
+                    <span class="lang-he">א. פירוק השם ומקורותיו (אטימולוגיה)</span>
+                    <span class="lang-en hidden">A. Etymology & Name Origins</span>
+                </h2>
+                <div class="highlight-box p-8 rounded-2xl shadow-lg space-y-6">
+                    <p class="text-slate-300 text-base md:text-lg">
+                        <strong class="text-white underline decoration-sky-500/30">ג'ורג' (George):</strong> 
+                        <span class="lang-he">
+                            מקורו ביוונית מהשם **"Georgos"** (Γεωרגός). הוא מורכב משתי מילים: **"Ge"** (אדמה) ו-**"Ergon"** (עבודה). המשמעות היא "עובד אדמה" או "איכר".
+                        </span>
+                    </p>
+                    <p class="text-slate-300 text-base md:text-lg">
+                        <strong class="text-white underline decoration-sky-500/30">וושינגטון (Washington):</strong> 
+                        <span class="lang-he">
+                            שם משפחה המגיע מהכפר **Washington** שבאנגליה. מורכב מהחלקים: **"Wassa"** (שם של מנהיג שבט), **"Inga"** (האנשים של), ו-**"Tun"** (חווה/התיישבות). משמעותו: "ההתיישבות של אנשי וואסה".
+                        </span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- ב. ילדות ורקע משפחתי מורחב -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
+                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
+                    <span class="lang-he">ב. ילדות ורקע משפחתי: עיצוב האדם</span>
+                    <span class="lang-en hidden">B. Childhood & Family Background</span>
+                </h2>
+                <div class="space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
+                    <p class="lang-he">
+                        ג'ורג' נולד באחוזת "פופס קריק" בווירג'יניה. בילדותו המוקדמת עברה המשפחה ל"פרי פארם" (Ferry Farm), שם גדל בחיק הטבע. הוא בילה את שנותיו הראשונות ברכיבה על סוסים ובשיטוט בשטחים הפתוחים של וירג'יניה, חוויות שהעניקו לו חוסן פיזי יוצא דופן וחיבור עמוק לאדמה.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                        <div class="deep-dive-card">
+                            <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">הרכב המשפחה ואחים</h4>
+                            <p class="text-sm">ג'ורג' היה הבכור מבין שישה ילדים שנולדו לאוגוסטין וושינגטון ומרי בול (אחיו: אליזבת, סמואל, ג'ון אוגוסטין, צ'ארלס ומילדרד שמתה בינקותה). בנוסף, היו לו ארבעה אחים למחצה מנישואיו הראשונים של אביו לג'יין באטלר (באטלר, לורנס, אוגוסטין הבן וג'יין). בסך הכל היה חלק ממשפחה של עשרה אחים ואחיות.</p>
+                        </div>
+                        <div class="deep-dive-card">
+                            <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">נסיבות מות האב</h4>
+                            <p class="text-sm">באפריל 1743, כשהיה ג'ורג' בן 11, אביו אוגוסטין נפטר בפתאומיות בגיל 48. לאחר רכיבה ארוכה במזג אוויר סוער וקר כדי לבדוק את נכסיו, הוא לקה במחלת בטן חריפה וקשה ("גאוט של הקיבה"). מותו המהיר קטע את תוכניות ההשכלה של ג'ורג' בבריטניה ואילץ אותו להפוך לאוטודידקט ולסייע בניהול המשק המשפחתי מגיל צעיר מאוד.</p>
+                        </div>
+                    </div>
+
+                    <div class="deep-dive-card">
+                        <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">ההשפעה של לורנס</h4>
+                        <p class="text-sm">לאחר מות אביו, אחיו למחצה לורנס הפך למנטור ולדמות אב עבורו. לורנס היה קצין בצבא הבריטי ובעל אחוזת "מאונט ורנון", ודרכו נחשף ג'ורג' לעולם הנימוסים, הפוליטיקה והצבא.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ג. המסלול הצבאי המוקדם -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
+                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
+                    <span class="lang-he">ג. המסלול הצבאי המוקדם: שירות ופרישה</span>
+                </h2>
+                <div class="space-y-6 text-slate-300 text-base md:text-lg">
+                    <p class="lang-he">ג'ורג' הצטרף למיליציית וירג'יניה מתוך שאיפה ליוקרה חברתית ולהכרה רשמית מהכתר הבריטי (Royal Commission). הוא קיווה להפוך לקצין סדיר ומכובד, אך נתקל בזלזול מצד הקצינים הבריטים שראו במתיישבים האמריקאים נחותים. האפליה בדרגות ובשכר הובילה אותו לפרוש באכזבה ב-1758.</p>
+                </div>
+            </section>
+
+            <!-- ד. המעבר למהפכה וצמיחת הדומיננטיות -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
+                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
+                    <span class="lang-he">ד. המעבר למהפכה וצמיחת הדומיננטיות</span>
+                </h2>
+                <div class="space-y-6 text-slate-300 text-base md:text-lg">
+                    <p class="lang-he">שמו של וושינגטון הפך לאגדה עוד לפני המהפכה בשל גבורתו בקרבות מוקדמים (אגדת "חסינות הכדורים"). המעבר למורד פעיל נבע מהכרה שבריטניה לעולם לא תעניק לאמריקאים שוויון זכויות. ב-1775 נבחר למפקד העליון, מהלך שנועד לאחד את כל המושבות תחת הנהגתו של קצין וירג'יני מוערך.</p>
+                </div>
+            </section>
+
+            <!-- ה. אידאולוגיה (נשמר מהגרסאות הקודמות) -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
+                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
+                    <span class="lang-he">ה. אידאולוגיה ותפיסת עולם</span>
+                </h2>
+                <p class="text-slate-300 text-base md:text-lg">
+                    דגל ברפובליקניזם קלאסי המבוסס על "מידה טובה אזרחית" (Civic Virtue). האמין שעל המנהיג להעמיד את טובת הכלל לפני אינטרסים אישיים, והזהיר בנאום הפרידה שלו מפני הסכנות שבמפלגתיות פוליטית ופילוג האומה.
+                </p>
+            </section>
+
+            <!-- ו. הישגים היסטוריים (שוחזר במלואו) -->
+            <section class="bg-slate-900/60 p-10 rounded-3xl border border-slate-800 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 underline underline-offset-8 decoration-sky-500">
+                    <span class="lang-he">ו. הישגים היסטוריים מרכזיים</span>
+                </h2>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 font-bold">1</div>
+                        <div>
+                            <h3 class="font-bold text-white text-xl">הנהגת צבא המהפכה</h3>
+                            <p class="text-slate-400 text-base mt-2">פיקוד על הצבא הקונטיננטלי בתנאים בלתי אפשריים עד לניצחון הסופי על האימפריה הבריטית ביוקטאון.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 font-bold">2</div>
+                        <div>
+                            <h3 class="font-bold text-white text-xl">יו"ר הוועידה החוקתית</h3>
+                            <p class="text-slate-400 text-base mt-2">הוביל את גיבוש חוקת ארצות הברית ב-1787 והיה הדמות המאחדת שאפשרה את אישורה על ידי המדינות השונות.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 font-bold">3</div>
+                        <div>
+                            <h3 class="font-bold text-white text-xl">ביסוס מוסד הנשיאות</h3>
+                            <p class="text-slate-400 text-base mt-2">יצר תקדימים קריטיים: הקמת הקבינט, שמירה על ניטרליות במדיניות החוץ, והגבלת הכהונה לשתי קדנציות בלבד.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function toggleLanguage() {
+            const isHe = document.documentElement.lang === 'he';
+            document.documentElement.lang = isHe ? 'en' : 'he';
+            document.documentElement.dir = isHe ? 'ltr' : 'rtl';
+            document.getElementById('langToggle').innerText = isHe ? 'עברית' : 'English';
+            document.querySelectorAll('.lang-he').forEach(el => el.classList.toggle('hidden'));
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+</html>
