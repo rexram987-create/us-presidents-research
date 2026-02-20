@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>נשיאי ארה"ב - מאגר מחקר היסטורי</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Inter:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Assistant', 'Inter', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+        }
+
+        .era-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid #1e293b;
+        }
+
+        /* Optimization for S25 Ultra Aspect Ratio */
+        @media (max-width: 450px) {
+            .nav-container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- 4. כפתור השפה וסרגל הניווט -->
+    <nav class="sticky top-0 z-50 glass-effect p-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <button onclick="navigateTo('home')" class="text-xl font-bold text-sky-400 tracking-tighter">US-PREZ</button>
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLanguage()" id="langToggle" class="bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-700 transition-all active:scale-95">
+                    English
+                </button>
+                <button onclick="navigateTo('about')" class="text-slate-400 hover:text-white transition-colors">
+                    <span class="lang-he">אודות</span>
+                    <span class="lang-en hidden">About</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-view" class="p-6 md:p-10 max-w-4xl mx-auto">
+        <!-- המבוא והכפתורים ירונדרו כאן על ידי JS -->
+    </main>
+
+    <script>
+        const siteData = {
+            currentLang: 'he',
+            currentView: 'home',
+            
+            translations: {
+                he: {
+                    title: "מחקר נשיאי ארצות הברית",
+                    intro: "ברוכים הבאים למאגר המידע המקיף על נשיאי ארה\"ב. האתר מציע ניתוח מעמיק של המנהיגות האמריקאית דרך ארבעה צירי מחקר: אטימולוגיה של השמות, רקע ילדות, תפיסת עולם אידאולוגית והישגים היסטוריים.",
+                    era1: "1. הקמת הרפובליקה (1789–1861)",
+                    era2: "2. ממלחמת האזרחים לשפל הגדול (1861–1933)",
+                    era3: "3. עידן מעצמת העל (1933–היום)",
+                    back: "חזור לבית",
+                    about_title: "אודות הפרויקט והחוקר",
+                    about_content: "שמי רם, חוקר היסטוריה וביוגרפיות המרתק מהקשר שבין שורשי האישיות לבין השפעתה על מהלך ההיסטוריה. האתר נבנה כפרויקט אישי המונגש ב-Dark Mode לשיפור חוויית הקריאה.",
+                    hobbies_title: "תחומי עניין",
+                    hobbies: ["יצירה עם בינה מלאכותית", "קריאת ביוגרפיות ורומנים היסטוריים", "מחקר היסטורי מעמיק"],
+                    personal_note: "הערה: האתר מותאם לקריאה נגישה, תוך התחשבות במגבלות בריאותיות (דיסאוטונומיה משפחתית)."
+                },
+                en: {
+                    title: "U.S. Presidents Research",
+                    intro: "Welcome to the comprehensive U.S. Presidents database. This site offers an in-depth analysis of American leadership through four research axes: Name etymology, childhood background, ideological worldview, and historical achievements.",
+                    era1: "1. Founding the Republic (1789–1861)",
+                    era2: "2. Civil War to Great Depression (1861–1933)",
+                    era3: "3. The Superpower Era (1933–Present)",
+                    back: "Back to Home",
+                    about_title: "About the Project & Researcher",
+                    about_content: "My name is Ram, a history and biography researcher fascinated by the connection between personal roots and historical impact. This site is a personal project designed in Dark Mode for an optimal reading experience.",
+                    hobbies_title: "Interests",
+                    hobbies: ["AI Creation", "Biographies & Historical Novels", "In-depth Historical Research"],
+                    personal_note: "Note: The site is designed for accessible reading, considering health constraints (Familial Dysautonomia)."
+                }
+            },
+
+            presidents: [
+                // ERA 1
+                { id: "01", era: 1, name: { he: "ג'ורג' וושינגטון", en: "George Washington" }, years: "1789–1797", file: "01-washington.html" },
+                { id: "02", era: 1, name: { he: "ג'ון אדמס", en: "John Adams" }, years: "1797–1801", file: "02-adams.html" },
+                { id: "03", era: 1, name: { he: "תומאס ג'פרסון", en: "Thomas Jefferson" }, years: "1801–1809", file: "03-jefferson.html" },
+                { id: "04", era: 1, name: { he: "ג'יימס מדיסון", en: "James Madison" }, years: "1809–1817", file: "04-madison.html" },
+                { id: "05", era: 1, name: { he: "ג'יימס מונרו", en: "James Monroe" }, years: "1817–1825", file: "05-monroe.html" },
+                { id: "06", era: 1, name: { he: "ג'ון קווינסי אדמס", en: "John Quincy Adams" }, years: "1825–1829", file: "06-quincy-adams.html" },
+                { id: "07", era: 1, name: { he: "אנדרו ג'קסון", en: "Andrew Jackson" }, years: "1829–1837", file: "07-jackson.html" },
+                { id: "08", era: 1, name: { he: "מרטין ואן ביורן", en: "Martin Van Buren" }, years: "1837–1841", file: "08-van-buren.html" },
+                { id: "09", era: 1, name: { he: "ויליאם ה. הריסון", en: "William H. Harrison" }, years: "1841", file: "09-harrison.html" },
+                { id: "10", era: 1, name: { he: "ג'ון טיילר", en: "John Tyler" }, years: "1841–1845", file: "10-tyler.html" },
+                { id: "11", era: 1, name: { he: "ג'יימס ק. פולק", en: "James K. Polk" }, years: "1845–1849", file: "11-polk.html" },
+                { id: "12", era: 1, name: { he: "זאכרי טיילור", en: "Zachary Taylor" }, years: "1849–1850", file: "12-taylor.html" },
+                { id: "13", era: 1, name: { he: "מילארד פילמור", en: "Millard Fillmore" }, years: "1850–1853", file: "13-fillmore.html" },
+                { id: "14", era: 1, name: { he: "פרנקלין פירס", en: "Franklin Pierce" }, years: "1853–1857", file: "14-pierce.html" },
+                { id: "15", era: 1, name: { he: "ג'יימס ביוקנן", en: "James Buchanan" }, years: "1857–1861", file: "15-buchanan.html" },
+                // ERA 2
+                { id: "16", era: 2, name: { he: "אברהם לינקולן", en: "Abraham Lincoln" }, years: "1861–1865", file: "16-lincoln.html" },
+                { id: "17", era: 2, name: { he: "אנדרו ג'ונסון", en: "Andrew Johnson" }, years: "1865–1869", file: "17-johnson.html" },
+                { id: "18", era: 2, name: { he: "יוליסס ס. גרנט", en: "Ulysses S. Grant" }, years: "1869–1877", file: "18-grant.html" },
+                { id: "19", era: 2, name: { he: "רתרפורד הייז", en: "Rutherford B. Hayes" }, years: "1877–1881", file: "19-hayes.html" },
+                { id: "20", era: 2, name: { he: "ג'יימס גרפילד", en: "James A. Garfield" }, years: "1881", file: "20-garfield.html" },
+                { id: "21", era: 2, name: { he: "צ'סטר ארתור", en: "Chester A. Arthur" }, years: "1881–1885", file: "21-arthur.html" },
+                { id: "22", era: 2, name: { he: "גרובר קליבלנד", en: "Grover Cleveland" }, years: "1885–1889", file: "22-cleveland.html" },
+                { id: "23", era: 2, name: { he: "בנימין הריסון", en: "Benjamin Harrison" }, years: "1889–1893", file: "23-harrison.html" },
+                { id: "24", era: 2, name: { he: "גרובר קליבלנד", en: "Grover Cleveland" }, years: "1893–1897", file: "24-cleveland.html" },
+                { id: "25", era: 2, name: { he: "ויליאם מקינלי", en: "William McKinley" }, years: "1897–1901", file: "25-mckinley.html" },
+                { id: "26", era: 2, name: { he: "תאודור רוזוולט", en: "Theodore Roosevelt" }, years: "1901–1909", file: "26-roosevelt.html" },
+                { id: "27", era: 2, name: { he: "ויליאם ה. טאפט", en: "William H. Taft" }, years: "1909–1913", file: "27-taft.html" },
+                { id: "28", era: 2, name: { he: "וודרו וילסון", en: "Woodrow Wilson" }, years: "1913–1921", file: "28-wilson.html" },
+                { id: "29", era: 2, name: { he: "וורן הרדינג", en: "Warren G. Harding" }, years: "1921–1923", file: "29-harding.html" },
+                { id: "30", era: 2, name: { he: "קלווין קולידג'", en: "Calvin Coolidge" }, years: "1923–1929", file: "30-coolidge.html" },
+                { id: "31", era: 2, name: { he: "הרברט הובר", en: "Herbert Hoover" }, years: "1929–1933", file: "31-hoover.html" },
+                // ERA 3
+                { id: "32", era: 3, name: { he: "פרנקלין ד. רוזוולט", en: "Franklin D. Roosevelt" }, years: "1933–1945", file: "32-roosevelt-fd.html" },
+                { id: "33", era: 3, name: { he: "הארי ס. טרומן", en: "Harry S. Truman" }, years: "1945–1953", file: "33-truman.html" },
+                { id: "34", era: 3, name: { he: "דווייט אייזנהאואר", en: "Dwight D. Eisenhower" }, years: "1953–1961", file: "34-eisenhower.html" },
+                { id: "35", era: 3, name: { he: "ג'ון פ. קנדי", en: "John F. Kennedy" }, years: "1961–1963", file: "35-kennedy.html" },
+                { id: "36", era: 3, name: { he: "לינדון ב. ג'ונסון", en: "Lyndon B. Johnson" }, years: "1963–1969", file: "36-johnson-lbj.html" },
+                { id: "37", era: 3, name: { he: "ריצ'רד ניקסון", en: "Richard Nixon" }, years: "1969–1974", file: "37-nixon.html" },
+                { id: "38", era: 3, name: { he: "ג'רלד פורד", en: "Gerald Ford" }, years: "1974–1977", file: "38-ford.html" },
+                { id: "39", era: 3, name: { he: "ג'ימי קרטר", en: "Jimmy Carter" }, years: "1977–1981", file: "39-carter.html" },
+                { id: "40", era: 3, name: { he: "רונלד רייגן", en: "Ronald Reagan" }, years: "1981–1989", file: "40-reagan.html" },
+                { id: "41", era: 3, name: { he: "ג'ורג' ה.ו. בוש", en: "George H.W. Bush" }, years: "1989–1993", file: "41-bush-hw.html" },
+                { id: "42", era: 3, name: { he: "ביל קלינטון", en: "Bill Clinton" }, years: "1993–2001", file: "42-clinton.html" },
+                { id: "43", era: 3, name: { he: "ג'ורג' ו. בוש", en: "George W. Bush" }, years: "2001–2009", file: "43-bush-w.html" },
+                { id: "44", era: 3, name: { he: "ברק אובמה", en: "Barack Obama" }, years: "2009–2017", file: "44-obama.html" },
+                { id: "45", era: 3, name: { he: "דונלד טראמפ", en: "Donald Trump" }, years: "2017–2021", file: "45-trump.html" },
+                { id: "46", era: 3, name: { he: "ג'ו ביידן", en: "Joe Biden" }, years: "2021–2025", file: "46-biden.html" },
+                { id: "47", era: 3, name: { he: "דונלד טראמפ", en: "Donald Trump" }, years: "2025–", file: "47-trump.html" }
+            ]
+        };
+
+        function navigateTo(view) {
+            siteData.currentView = view;
+            window.scrollTo(0, 0);
+            render();
+        }
+
+        function toggleLanguage() {
+            siteData.currentLang = siteData.currentLang === 'he' ? 'en' : 'he';
+            document.documentElement.lang = siteData.currentLang;
+            document.documentElement.dir = siteData.currentLang === 'he' ? 'rtl' : 'ltr';
+            document.getElementById('langToggle').innerText = siteData.currentLang === 'he' ? 'English' : 'עברית';
+            render();
+        }
+
+        function render() {
+            const container = document.getElementById('main-view');
+            const t = siteData.translations[siteData.currentLang];
+            const isHe = siteData.currentLang === 'he';
+
+            if (siteData.currentView === 'home') {
+                let html = `
+                    <!-- 2. מבוא -->
+                    <header class="mb-12 animate-in fade-in duration-700">
+                        <h1 class="text-4xl font-bold text-white mb-4 tracking-tight">${t.title}</h1>
+                        <p class="text-slate-400 leading-relaxed text-sm max-w-2xl">${t.intro}</p>
+                    </header>
+
+                    <!-- 3. כפתורי נשיאים (מחולקים לתקופות) -->
+                    <div class="space-y-10">
+                `;
+
+                for (let eraNum = 1; eraNum <= 3; eraNum++) {
+                    const eraPresidents = siteData.presidents.filter(p => p.era === eraNum);
+                    html += `
+                        <section>
+                            <h2 class="text-xs font-bold text-sky-400 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">
+                                ${t['era' + eraNum]}
+                            </h2>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                ${eraPresidents.map(p => `
+                                    <a href="presidents/${p.file}" class="p-3 rounded-xl era-card hover:border-sky-500 transition-all active:scale-95 group">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="text-[10px] font-mono text-slate-500">#${p.id}</span>
+                                            <span class="text-slate-600 group-hover:text-sky-400">→</span>
+                                        </div>
+                                        <span class="text-sm font-bold text-white group-hover:text-sky-400 block truncate">${p.name[siteData.currentLang]}</span>
+                                        <span class="text-[10px] text-slate-500">${p.years}</span>
+                                    </a>
+                                `).join('')}
+                            </div>
+                        </section>
+                    `;
+                }
+                html += `</div>`;
+                container.innerHTML = html;
+
+            } else if (siteData.currentView === 'about') {
+                // 1. עמוד אודות
+                container.innerHTML = `
+                    <div class="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <button onclick="navigateTo('home')" class="text-sky-400 mb-8 flex items-center gap-2 text-sm font-bold">
+                            <span>${isHe ? '→' : '←'}</span> ${t.back}
+                        </button>
+                        
+                        <div class="bg-slate-900/50 p-6 md:p-10 rounded-3xl border border-slate-800 shadow-2xl">
+                            <h1 class="text-3xl font-bold text-white mb-6">${t.about_title}</h1>
+                            <p class="text-slate-300 leading-relaxed mb-8">${t.about_content}</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                                <div class="bg-slate-800/50 p-5 rounded-2xl">
+                                    <h3 class="text-sky-400 font-bold text-sm mb-4 uppercase tracking-wider">${t.hobbies_title}</h3>
+                                    <ul class="space-y-2">
+                                        ${t.hobbies.map(h => `<li class="text-xs text-slate-400 flex gap-2"><span>•</span> ${h}</li>`).join('')}
+                                    </ul>
+                                </div>
+                                <div class="bg-slate-800/50 p-5 rounded-2xl flex items-center">
+                                    <p class="text-[11px] text-slate-500 italic leading-relaxed">${t.personal_note}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        render();
+    </script>
+</body>
+</html>
