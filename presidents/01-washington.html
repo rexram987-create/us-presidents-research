@@ -13,7 +13,7 @@
             background-color: #020617;
             color: #e2e8f0;
             -webkit-tap-highlight-color: transparent;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .glass-effect {
@@ -27,11 +27,33 @@
             border-right: 4px solid #38bdf8;
         }
 
+        .context-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #334155;
+            border-radius: 2rem;
+        }
+
         .deep-dive-card {
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid #1e293b;
-            padding: 1.5rem;
-            border-radius: 1rem;
+            padding: 2rem;
+            border-radius: 1.5rem;
+        }
+
+        .sibling-tag {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #7dd3fc;
+        }
+
+        /* S25 Ultra Optimization */
+        @media (max-width: 450px) {
+            h1 { font-size: 3rem !important; }
+            .p-12 { padding: 1.5rem !important; }
+            .space-y-24 { space-y-16 !important; }
         }
     </style>
 </head>
@@ -41,162 +63,238 @@
     <nav class="sticky top-0 z-50 glass-effect p-4">
         <div class="max-w-4xl mx-auto flex justify-between items-center">
             <a href="../index.html" class="text-sky-400 font-bold text-sm flex items-center gap-2">
-                <span class="lang-he">← חזרה לאינדקס</span>
-                <span class="lang-en hidden">Back to Index →</span>
+                <span class="text-lg">←</span>
+                <span>חזרה לאינדקס הנשיאים</span>
             </a>
-            <button onclick="toggleLanguage()" id="langToggle" class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold border border-slate-700 transition-all active:scale-95">
-                English
-            </button>
+            <div class="text-slate-500 text-[10px] uppercase tracking-widest font-bold">מחקר נשיאותי מפורט</div>
         </div>
     </nav>
 
-    <main class="p-6 md:p-12 max-w-5xl mx-auto animate-in fade-in duration-700">
+    <main class="p-6 md:p-12 max-w-5xl mx-auto animate-in fade-in duration-1000">
         
         <!-- Identity Header -->
-        <header class="mb-16">
-            <div class="flex flex-col gap-2 mb-6">
-                <span class="text-sky-400 font-mono text-xs tracking-[0.3em] uppercase font-bold">President #01</span>
-                <h1 class="text-4xl md:text-8xl font-bold text-white leading-tight tracking-tighter">
-                    <span class="lang-he">ג'ורג' וושינגטון</span>
-                    <span class="lang-en hidden">George Washington</span>
-                </h1>
+        <header class="mb-20">
+            <div class="flex flex-col gap-3 mb-8">
+                <span class="text-sky-400 font-mono text-xs tracking-[0.4em] uppercase font-bold">הנשיא הראשון #01</span>
+                <h1 class="text-5xl md:text-8xl font-bold text-white leading-tight tracking-tighter">ג'ורג' וושינגטון</h1>
             </div>
 
             <!-- Essential Info Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-900/80 p-8 rounded-[2rem] border border-slate-800 shadow-2xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-900/80 p-8 rounded-[2.5rem] border border-slate-800 shadow-2xl">
                 <div>
                     <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">שנות כהונה</span>
-                    <span class="text-white font-bold text-base">1789–1797</span>
+                    <span class="text-white font-bold text-base md:text-xl">1789–1797</span>
                 </div>
                 <div>
                     <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">שנות חיים</span>
-                    <span class="text-white font-bold text-sm">1732–1799</span>
+                    <span class="text-white font-bold text-base md:text-xl">1732–1799</span>
                 </div>
                 <div>
                     <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">מקום לידה</span>
-                    <span class="text-white font-bold text-sm">וירג'יניה</span>
+                    <span class="text-white font-bold text-base md:text-xl">וירג'יניה</span>
                 </div>
                 <div>
                     <span class="text-slate-500 block text-[10px] uppercase mb-1 tracking-widest font-bold">מפלגה</span>
-                    <span class="text-white font-bold text-sm">עצמאי</span>
+                    <span class="text-white font-bold text-base md:text-xl">עצמאי</span>
                 </div>
             </div>
         </header>
 
-        <div class="space-y-20">
+        <div class="space-y-24">
 
             <!-- א. אטימולוגיה מורחבת -->
             <section>
-                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
-                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
-                    <span class="lang-he">א. פירוק השם ומקורותיו (אטימולוגיה)</span>
-                    <span class="lang-en hidden">A. Etymology & Name Origins</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>א. פירוק השם ומקורותיו (אטימולוגיה)</span>
                 </h2>
-                <div class="highlight-box p-8 rounded-2xl shadow-lg space-y-6">
-                    <p class="text-slate-300 text-base md:text-lg">
-                        <strong class="text-white underline decoration-sky-500/30">ג'ורג' (George):</strong> 
-                        <span class="lang-he">
-                            מקורו ביוונית מהשם **"Georgos"** (Γεωרגός). הוא מורכב משתי מילים: **"Ge"** (אדמה) ו-**"Ergon"** (עבודה). המשמעות היא "עובד אדמה" או "איכר".
-                        </span>
+                <div class="highlight-box p-10 rounded-3xl shadow-xl space-y-6 bg-slate-900/40">
+                    <p class="text-slate-200 text-lg md:text-xl italic leading-relaxed">
+                        <strong class="text-white border-b-2 border-sky-500/30">ג'ורג' (George):</strong> 
+                        מקורו ביוונית מהשם **"Georgos"** (Γεωργός). הוא מורכב משתי מילים: **"Ge"** (אדמה) ו-**"Ergon"** (עבודה). המשמעות היא "עובד אדמה" או "איכר". זהו שם שסימל עבורו את זהותו העמוקה ביותר – אדם הקשור לאדמתו בכל נימי נפשו.
                     </p>
-                    <p class="text-slate-300 text-base md:text-lg">
-                        <strong class="text-white underline decoration-sky-500/30">וושינגטון (Washington):</strong> 
-                        <span class="lang-he">
-                            שם משפחה המגיע מהכפר **Washington** שבאנגליה. מורכב מהחלקים: **"Wassa"** (שם של מנהיג שבט), **"Inga"** (האנשים של), ו-**"Tun"** (חווה/התיישבות). משמעותו: "ההתיישבות של אנשי וואסה".
-                        </span>
+                    <p class="text-slate-200 text-lg md:text-xl italic leading-relaxed">
+                        <strong class="text-white border-b-2 border-sky-500/30">וושינגטון (Washington):</strong> 
+                        זהו שם משפחה המבוסס על מקום גיאוגרפי באנגליה. השם מגיע מהכפר **Washington** שבמחוז דרהאם. הפירוק האנגלו-סקסי העתיק שלו הוא: 
+                        **"Wassa"** (שמו של מנהיג שבט מקומי), **"Inga"** (האנשים של), ו-**"Tun"** (חווה או התיישבות). כלומר: "ההתיישבות של בני וואסה".
                     </p>
                 </div>
             </section>
 
-            <!-- ב. ילדות ורקע משפחתי מורחב -->
+            <!-- ב. ילדות והרכב משפחתי מורחב -->
             <section>
-                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
-                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
-                    <span class="lang-he">ב. ילדות ורקע משפחתי: עיצוב האדם</span>
-                    <span class="lang-en hidden">B. Childhood & Family Background</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ב. ילדות והרכב משפחתי: עשרה אחים</span>
                 </h2>
-                <div class="space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
-                    <p class="lang-he">
-                        ג'ורג' נולד באחוזת "פופס קריק" בווירג'יניה. בילדותו המוקדמת עברה המשפחה ל"פרי פארם" (Ferry Farm), שם גדל בחיק הטבע. הוא בילה את שנותיו הראשונות ברכיבה על סוסים ובשיטוט בשטחים הפתוחים של וירג'יניה, חוויות שהעניקו לו חוסן פיזי יוצא דופן וחיבור עמוק לאדמה.
+                <div class="space-y-8 text-slate-300 text-lg md:text-xl leading-relaxed">
+                    <p>
+                        ג'ורג' נולד באחוזת "פופס קריק" בווירג'יניה. הוא גדל במשפחה מורכבת וגדולה מאוד, עובדה שהכריחה אותו לפתח כישורי הישרדות וסדר מגיל צעיר. 
                     </p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                        <div class="deep-dive-card">
-                            <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">הרכב המשפחה ואחים</h4>
-                            <p class="text-sm">ג'ורג' היה הבכור מבין שישה ילדים שנולדו לאוגוסטין וושינגטון ומרי בול (אחיו: אליזבת, סמואל, ג'ון אוגוסטין, צ'ארלס ומילדרד שמתה בינקותה). בנוסף, היו לו ארבעה אחים למחצה מנישואיו הראשונים של אביו לג'יין באטלר (באטלר, לורנס, אוגוסטין הבן וג'יין). בסך הכל היה חלק ממשפחה של עשרה אחים ואחיות.</p>
-                        </div>
-                        <div class="deep-dive-card">
-                            <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">נסיבות מות האב</h4>
-                            <p class="text-sm">באפריל 1743, כשהיה ג'ורג' בן 11, אביו אוגוסטין נפטר בפתאומיות בגיל 48. לאחר רכיבה ארוכה במזג אוויר סוער וקר כדי לבדוק את נכסיו, הוא לקה במחלת בטן חריפה וקשה ("גאוט של הקיבה"). מותו המהיר קטע את תוכניות ההשכלה של ג'ורג' בבריטניה ואילץ אותו להפוך לאוטודידקט ולסייע בניהול המשק המשפחתי מגיל צעיר מאוד.</p>
-                        </div>
-                    </div>
-
                     <div class="deep-dive-card">
-                        <h4 class="text-white font-bold mb-3 border-b border-slate-700 pb-2">ההשפעה של לורנס</h4>
-                        <p class="text-sm">לאחר מות אביו, אחיו למחצה לורנס הפך למנטור ולדמות אב עבורו. לורנס היה קצין בצבא הבריטי ובעל אחוזת "מאונט ורנון", ודרכו נחשף ג'ורג' לעולם הנימוסים, הפוליטיקה והצבא.</p>
+                        <h4 class="text-white font-bold mb-6 border-b border-slate-700 pb-2 text-xl">רשימת עשרת האחים והאחיות</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <span class="text-sky-400 text-sm font-bold block mb-2">אחים למחצה (מנישואי אביו לג'יין באטלר):</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="sibling-tag">באטלר</span>
+                                    <span class="sibling-tag">לורנס (המודל לחיקוי)</span>
+                                    <span class="sibling-tag">אוגוסטין הבן</span>
+                                    <span class="sibling-tag">ג'יין</span>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-amber-400 text-sm font-bold block mb-2">אחים מלאים (מנישואי אביו למרי בול):</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="sibling-tag text-amber-200 border-amber-500/30 bg-amber-500/10">ג'ורג' (הבכור)</span>
+                                    <span class="sibling-tag text-amber-200 border-amber-500/30 bg-amber-500/10">אליזבת (בטי)</span>
+                                    <span class="sibling-tag text-amber-200 border-amber-500/30 bg-amber-500/10">סמואל</span>
+                                    <span class="sibling-tag text-amber-200 border-amber-500/30 bg-amber-500/10">ג'ון אוגוסטין</span>
+                                    <span class="sibling-tag text-amber-200 border-amber-500/30 bg-amber-500/10">צ'ארלס</span>
+                                    <span class="sibling-tag text-amber-200 border-amber-500/30 bg-amber-500/10">מילדרד</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ג. המסלול הצבאי המוקדם -->
+            <!-- ג. מות האב אוגוסטין: השלכות ישירות (חדש) -->
             <section>
-                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
-                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
-                    <span class="lang-he">ג. המסלול הצבאי המוקדם: שירות ופרישה</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ג. מות האב: הרגע ששינה את מסלול חייו</span>
                 </h2>
-                <div class="space-y-6 text-slate-300 text-base md:text-lg">
-                    <p class="lang-he">ג'ורג' הצטרף למיליציית וירג'יניה מתוך שאיפה ליוקרה חברתית ולהכרה רשמית מהכתר הבריטי (Royal Commission). הוא קיווה להפוך לקצין סדיר ומכובד, אך נתקל בזלזול מצד הקצינים הבריטים שראו במתיישבים האמריקאים נחותים. האפליה בדרגות ובשכר הובילה אותו לפרוש באכזבה ב-1758.</p>
+                <div class="space-y-8 text-slate-300 text-lg md:text-xl leading-relaxed">
+                    <p>
+                        באפריל 1743, כשאוגוסטין וושינגטון נפטר בפתאומיות, ג'ורג' בן ה-11 חווה זעזוע שלא היה רק רגשי, אלא טלטלה קיומית.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="highlight-box p-8 rounded-2xl bg-slate-900/40 border border-slate-800">
+                            <h4 class="text-white font-bold mb-4">אובדן ההשכלה והמעמד</h4>
+                            <p class="text-base leading-relaxed">
+                                בניגוד לאחיו הגדולים לורנס ואוגוסטין הבן, שנשלחו ללמוד בבתי ספר יוקרתיים באנגליה, ג'ורג' נאלץ להישאר בווירג'יניה. הכסף להשכלה אירופאית אזל עם מות האב. הוא הפך לאוטודידקט, מה שיצר אצלו רגשי נחיתות מסוימים מול האצולה המשכילה, אך גם בנה אצלו חשיבה מעשית וריאלית יוצאת דופן.
+                            </p>
+                        </div>
+                        <div class="highlight-box p-8 rounded-2xl bg-slate-900/40 border border-slate-800">
+                            <h4 class="text-white font-bold mb-4">השלכות כלכליות</h4>
+                            <p class="text-base leading-relaxed">
+                                הירושה המרכזית (אחוזת ליטל האנטינג קריק, שלימים תהיה מאונט ורנון) עברה לאחיו לורנס. ג'ורג' ירש רק את אחוזת "פרי פארם" הקטנה יותר ועשרה עבדים. הצורך להוכיח את עצמו ולבנות הון במו ידיו דחף אותו לעבוד קשה כמדד מקרקעין כבר בגיל 16, כדי לא להישאר "אח קטן ועני".
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- ד. המעבר למהפכה וצמיחת הדומיננטיות -->
+            <!-- ד. רקע קדם-צבאי: מודד המקרקעין -->
             <section>
-                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
-                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
-                    <span class="lang-he">ד. המעבר למהפכה וצמיחת הדומיננטיות</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ד. הרקע הקדם-צבאי: מודד הקרקעות הצעיר</span>
                 </h2>
-                <div class="space-y-6 text-slate-300 text-base md:text-lg">
-                    <p class="lang-he">שמו של וושינגטון הפך לאגדה עוד לפני המהפכה בשל גבורתו בקרבות מוקדמים (אגדת "חסינות הכדורים"). המעבר למורד פעיל נבע מהכרה שבריטניה לעולם לא תעניק לאמריקאים שוויון זכויות. ב-1775 נבחר למפקד העליון, מהלך שנועד לאחד את כל המושבות תחת הנהגתו של קצין וירג'יני מוערך.</p>
+                <div class="space-y-6 text-slate-300 text-lg md:text-xl leading-relaxed">
+                    <p>
+                        בגיל 16 יצא ג'ורג' למסעות מדידה בטריטוריות המערביות. העבודה בשטח פיתחה אצלו חוסן פיזי אדיר, יכולת ניווט ויכולת לקרוא את פני הקרקע – מיומנויות שהפכו אותו למפקד נדיר שידע לנצל את הטבע לטובתו בקרבות עתידיים.
+                    </p>
                 </div>
             </section>
 
-            <!-- ה. אידאולוגיה (נשמר מהגרסאות הקודמות) -->
+            <!-- ה. השירות הצבאי והמניעים להצטרפות -->
             <section>
-                <h2 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 flex items-center gap-4">
-                    <span class="w-10 h-[1px] bg-sky-400/30"></span>
-                    <span class="lang-he">ה. אידאולוגיה ותפיסת עולם</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ה. השירות הצבאי: המניעים והסיבות</span>
                 </h2>
-                <p class="text-slate-300 text-base md:text-lg">
-                    דגל ברפובליקניזם קלאסי המבוסס על "מידה טובה אזרחית" (Civic Virtue). האמין שעל המנהיג להעמיד את טובת הכלל לפני אינטרסים אישיים, והזהיר בנאום הפרידה שלו מפני הסכנות שבמפלגתיות פוליטית ופילוג האומה.
-                </p>
+                <div class="space-y-8 text-slate-300 text-lg md:text-xl leading-relaxed">
+                    <div class="bg-slate-900/40 p-10 rounded-[2rem] border border-slate-800 shadow-xl">
+                        <h3 class="text-white font-bold mb-6 text-xl border-b border-sky-500/20 pb-4">מדוע הוא הצטרף לצבא?</h3>
+                        <p>
+                            1. **הערצת האח:** אחיו לורנס שירת כקצין בצי הבריטי והיה המודל לחיקוי של ג'ורג'. השירות הצבאי נתפס בעיניו כפסגת הגבריות והכבוד. 
+                            <br>
+                            2. **קידום חברתי:** בווירג'יניה של אותם ימים, קצונה הייתה הדרך המהירה ביותר עבור אדם ללא השכלה אקדמית להפוך ל"ג'נטלמן" מוכר.
+                            <br>
+                            3. **שאיפה להכרה בריטית:** הוא כמה לקבל מינוי קצונה רשמי מהמלך (Royal Commission), מה שהיה מעניק לו מעמד שווה לקצינים שנולדו בלונדון.
+                        </p>
+                    </div>
+                </div>
             </section>
 
-            <!-- ו. הישגים היסטוריים (שוחזר במלואו) -->
-            <section class="bg-slate-900/60 p-10 rounded-3xl border border-slate-800 shadow-xl">
-                <h2 class="text-3xl font-bold text-white mb-8 underline underline-offset-8 decoration-sky-500">
-                    <span class="lang-he">ו. הישגים היסטוריים מרכזיים</span>
+            <!-- ו. המעבר למחתרת: מאיש צבא למורד (חדש) -->
+            <section>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ו. המהפך: מאיש צבא נאמן למנהיג המחתרת</span>
                 </h2>
-                <div class="grid grid-cols-1 gap-8">
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 font-bold">1</div>
-                        <div>
-                            <h3 class="font-bold text-white text-xl">הנהגת צבא המהפכה</h3>
-                            <p class="text-slate-400 text-base mt-2">פיקוד על הצבא הקונטיננטלי בתנאים בלתי אפשריים עד לניצחון הסופי על האימפריה הבריטית ביוקטאון.</p>
+                <div class="deep-dive-card">
+                    <p class="mb-6">
+                        המעבר של וושינגטון מצד הכתר לצד המורדים לא היה פתאומי, אלא תהליך של התפכחות כואבת:
+                    </p>
+                    <div class="space-y-6">
+                        <div class="highlight-box p-6 rounded-xl bg-slate-900/20">
+                            <strong class="text-white">האפליה הבריטית:</strong> וושינגטון גילה שקצינים בריטים צעירים וחסרי ניסיון קיבלו עדיפות על פניו רק בגלל שנולדו באנגליה. הוא הושפל כשגילה שדרגתו האמריקאית אינה נחשבת בעיניהם. זה יצר אצלו קרע רגשי עמוק עם האימפריה.
+                        </div>
+                        <div class="highlight-box p-6 rounded-xl bg-slate-900/20">
+                            <strong class="text-white">אינטרסים כלכליים:</strong> הבריטים הגבילו את ההתיישבות במערב (שטחים שוושינגטון מדד והכיר). הוא הבין שהמדיניות הבריטית חונקת את עתיד המושבות ואת עתידו האישי כבעל אדמות.
                         </div>
                     </div>
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 font-bold">2</div>
-                        <div>
-                            <h3 class="font-bold text-white text-xl">יו"ר הוועידה החוקתית</h3>
-                            <p class="text-slate-400 text-base mt-2">הוביל את גיבוש חוקת ארצות הברית ב-1787 והיה הדמות המאחדת שאפשרה את אישורה על ידי המדינות השונות.</p>
-                        </div>
+                </div>
+            </section>
+
+            <!-- ז. מן המחתרת לפוליטיקה (חדש) -->
+            <section>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ז. צמיחת המנהיג הפוליטי</span>
+                </h2>
+                <div class="space-y-8 text-slate-300 text-lg md:text-xl leading-relaxed">
+                    <p>
+                        לאחר שפרש מהצבא ב-1758, וושינגטון לא נח. הוא נבחר ל**בית הנבחרים של וירג'יניה** (House of Burgesses). שם הוא למד את אמנות הפוליטיקה: בניית קואליציות, הקשבה וניהול דיונים. כאשר המתח עם בריטניה עלה, הוא כבר היה פוליטיקאי מנוסה שייצג את וירג'יניה בקונגרס הקונטיננטלי. המוניטין שלו כאיש צבא לשעבר וכפוליטיקאי בהווה הפך אותו למועמד היחיד שיכול היה לאחד את כל המושבות תחת הנהגה אחת.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ח. מרתה וושינגטון: הפרש השנים וההיכרות -->
+            <section>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ח. מרתה וושינגטון: השותפות והפרש השנים</span>
+                </h2>
+                <div class="space-y-8 text-slate-300 text-lg md:text-xl leading-relaxed">
+                    <div class="bg-slate-900/40 p-10 rounded-[2rem] border border-slate-800 shadow-xl">
+                        <p>
+                            ג'ורג' ומרתה נישאו ב-1759. מרתה הייתה אלמנה עשירה שהביאה איתה יציבות וביטחון כלכלי. 
+                            <br><br>
+                            **הפרש השנים:** מרתה הייתה מבוגרת מג'ורג' ב**שמונה חודשים** (היא נולדה ביוני 1731, הוא בפברואר 1732). למרות שהחיזור היה מהיר (שתי פגישות בלבד לפני ההצעה), הנישואין החזיקו מעמד 40 שנה עד מותו. מרתה הייתה הכוח השקט שמאחורי המנהיג הגדול.
+                        </p>
                     </div>
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 font-bold">3</div>
-                        <div>
-                            <h3 class="font-bold text-white text-xl">ביסוס מוסד הנשיאות</h3>
-                            <p class="text-slate-400 text-base mt-2">יצר תקדימים קריטיים: הקמת הקבינט, שמירה על ניטרליות במדיניות החוץ, והגבלת הכהונה לשתי קדנציות בלבד.</p>
-                        </div>
+                </div>
+            </section>
+
+            <!-- ט. הבית הלבן: הנשיא שלא גר בו -->
+            <section>
+                <h2 class="text-2xl md:text-4xl font-bold text-sky-400 mb-10 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-sky-400/30"></span>
+                    <span>ט. הקשר לבית הלבן: הנשיא היחיד שלא התגורר בו</span>
+                </h2>
+                <div class="deep-dive-card bg-sky-500/5 border-sky-500/20">
+                    <p class="text-lg md:text-xl leading-relaxed">
+                        ג'ורג' וושינגטון בחר את המיקום ופיקח על התכנון ב-1791, אך הבנייה נמשכה שמונה שנים. הוא סיים את כהונתו ב-1797 ונפטר ב-1799, שנה אחת בלבד לפני שהבניין היה מוכן למגורים עבור יורשו, ג'ון אדמס.
+                    </p>
+                </div>
+            </section>
+
+            <!-- סיכום הישגים ואידאולוגיה -->
+            <section class="bg-slate-900/80 p-12 rounded-[3rem] border border-slate-800 shadow-2xl">
+                <h2 class="text-3xl font-bold text-white mb-10 underline underline-offset-8 decoration-sky-500 font-bold">הישגים ואידאולוגיה מסכמת</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-4">
+                        <h4 class="text-sky-400 font-bold uppercase text-sm tracking-widest font-bold">מנהיגות צבאית</h4>
+                        <p class="text-slate-400 text-base leading-relaxed">ניצחון על האימפריה החזקה בעולם כנגד כל הסיכויים.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-sky-400 font-bold uppercase text-sm tracking-widest font-bold">הגבלת השלטון</h4>
+                        <p class="text-slate-400 text-base leading-relaxed">ויתור על הכוח לאחר שתי קדנציות, תקדים שביסס את הדמוקרטיה האמריקאית.</p>
                     </div>
                 </div>
             </section>
@@ -204,15 +302,6 @@
         </div>
     </main>
 
-    <script>
-        function toggleLanguage() {
-            const isHe = document.documentElement.lang === 'he';
-            document.documentElement.lang = isHe ? 'en' : 'he';
-            document.documentElement.dir = isHe ? 'ltr' : 'rtl';
-            document.getElementById('langToggle').innerText = isHe ? 'עברית' : 'English';
-            document.querySelectorAll('.lang-he').forEach(el => el.classList.toggle('hidden'));
-            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden'));
-        }
-    </script>
 </body>
 </html>
+
