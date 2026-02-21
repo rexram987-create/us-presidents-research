@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ג'יימס מדיסון - מחקר היסטורי</title>
+    
+    <!-- ייבוא גופנים וסמלים -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- ייבוא Tailwind CSS (ספריית העיצוב) ישירות לדפדפן -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Arimo', sans-serif;
+            background-color: #020617; /* Slate 950 - מותאם AMOLED */
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* עיצוב פס גלילה (Scrollbar) שיתאים למצב הכהה */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+    </style>
+</head>
+<body class="text-gray-100 selection:bg-blue-500 selection:text-white pb-12 antialiased">
+
+    <!-- מעטפת ראשית רספונסיבית -->
+    <div class="max-w-md mx-auto sm:max-w-2xl md:max-w-4xl lg:max-w-5xl">
+        
+        <!-- כותרת עליונה -->
+        <header class="pt-12 pb-6 px-6 text-center bg-[#020617] border-b border-gray-900">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-400 mb-1">
+                מחקר נשיאי ארה"ב
+            </h1>
+            <p class="text-blue-500 text-sm font-mono tracking-widest">
+                קובץ אישי - נשיא מס' 4
+            </p>
+        </header>
+
+        <!-- תוכן המחקר -->
+        <main class="p-4 sm:p-6 animate-fade-in-up mt-4">
+            <div class="bg-gray-900 rounded-3xl p-6 sm:p-10 shadow-2xl border border-gray-800 relative overflow-hidden">
+                
+                <!-- רקע דקורטיבי (הילת אור עדינה) -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+
+                <!-- כותרת הנשיא -->
+                <div class="border-b border-gray-800 pb-8 mb-10 text-center sm:text-right relative z-10">
+                    <h1 class="text-5xl sm:text-6xl font-extrabold text-white mb-2 tracking-tight">ג'יימס מדיסון</h1>
+                    <h2 class="text-2xl sm:text-3xl text-gray-400 font-serif italic mb-8">James Madison</h2>
+                    
+                    <div class="flex flex-wrap justify-center sm:justify-start gap-5">
+                        <div class="bg-[#020617] px-6 py-4 rounded-2xl border border-gray-700 shadow-inner flex flex-col justify-center">
+                            <span class="block text-sm text-gray-500 mb-1 font-medium">שנות חיים</span>
+                            <span class="text-2xl font-extrabold text-white">1751 - 1836</span>
+                        </div>
+                        <div class="bg-blue-900/20 px-6 py-4 rounded-2xl border border-blue-900/50 shadow-inner flex flex-col justify-center">
+                            <span class="block text-sm text-blue-400/70 mb-1 font-medium">שנות כהונה כנשיא ה-4</span>
+                            <span class="text-2xl font-extrabold text-blue-100">1809 - 1817</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- פסקאות המחקר הרחבות -->
+                <div class="space-y-10 relative z-10">
+                    
+                    <!-- סעיף 1: אטימולוגיה -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">📖</span> אטימולוגיה ומקור השם
+                        </h3>
+                        <div class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            <p class="mb-3"><strong class="text-white">שם פרטי (ג'יימס):</strong> הגרסה האנגלית לשם המקראי יעקב ("תופס העקב"), שהתגלגל לאנגלית דרך השם הלטיני המאוחר יאקומוס (Iacomus).</p>
+                            <p><strong class="text-white">שם משפחה (מדיסון):</strong> שם פטרונימי אנגלי שמקורו בימי הביניים. יש לו שתי משמעויות אטימולוגיות מרכזיות: הראשונה היא "בנה של מוד" (Maud) - שם נשי שמקורו גרמאני (מתילדה) ומשמעותו "עוצמה בקרב". השנייה היא התפתחות של "בנו של מתיו" (מתתיהו). השם והמשפחה מייצגים שורשים אנגלו-סקסיים עמוקים של משפחת בעלי מטעים ותיקה שהיגרה לווירג'יניה במאה ה-17.</p>
+                        </div>
+                    </section>
+
+                    <!-- סעיף 2: הרכב המשפחה -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">👨‍👩‍👦</span> הרכב המשפחה
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            מדיסון נולד למשפחת בעלי מטעים עשירה ובעלת השפעה בווירג'יניה. אביו, ג'יימס מדיסון האב, היה בעל הקרקעות ומחזיק העבדים הגדול ביותר במחוז אורנג'. אמו, אלינור רוז "נלי" קונווי, הייתה אישה דתית ואדוקה. ג'יימס היה הבכור מבין 12 אחים ואחיות, אך בשל תנאי התברואה של התקופה, רק 7 מתוכם שרדו והגיעו לבגרות. למרות שהיה נשוי באושר רוב שנותיו הבוגרות, למדיסון מעולם לא היו ילדים ביולוגיים משלו. עם זאת, הוא אימץ בחום וגידל כבנו את ג'ון פיין טוד, בנה של אשתו מנישואיה הראשונים.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 3: פעילות קדם-מהפכנית -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">📚</span> פעילות קדם-מהפכנית
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            לפני פרוץ המהפכה האמריקאית (ופעילות ה"מחתרת" הפטריוטית), מדיסון היה אינטלקטואל צעיר ומופנם ששקד על לימודיו. בניגוד לרבים מבני מעמדו, הוא לא נסע לאנגליה אלא בחר ללמוד בקולג' של ניו ג'רזי (כיום אוניברסיטת פרינסטון) תחת הנהגתו של נשיא הקולג' המהפכני, ג'ון וית'רספון. הוא העמיק בפילוסופיה של ההשכלה הסקוטית, חקר ממשל, שלט בשפות קלאסיות ואף למד עברית. בשל מבנה גופו הצנום והשברירי (הוא סבל מהתקפים דמויי אפילפסיה או התקפי חרדה עזים שמנעו ממנו פעילות גופנית מאומצת), הוא לא היה מסוגל להצטרף ללחימה הפיזית כחייל. במקום זאת, הוא חזר לאחוזת משפחתו במונטפלייר, שם שימש כמורה פרטי לאחיו הקטנים וקרא בשקיקה ספרי חוק ופילוסופיה של המדינה.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 4: הכניסה לפוליטיקה -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">✊</span> הכניסה לפוליטיקה (1774-1776)
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            הכניסה הרשמית של מדיסון לפוליטיקה התרחשה בשנת 1774 (בהיותו בן 23 בלבד), כאשר נבחר לוועדת הביטחון של מחוז אורנג' בווירג'יניה (הגוף המקומי שהחליף את השלטון הבריטי). המניע המרכזי שדחף את האינטלקטואל המופנם לעשייה הציבורית לא היה מסים (כמו בקרב מהפכני בוסטון), אלא זעמו המוסרי העמוק על רדיפה דתית: הוא חזה כיצד השלטון המקומי כלא מטיפים בפטיסטים רק משום שהטיפו ללא רישיון מהכנסייה האנגליקנית הממסדית. ב-1776 נבחר כנציג לוועידת וירג'יניה, שם רשם את הישגו הפוליטי הראשון: הוא שינה את הנוסח של הצהרת הזכויות של וירג'יניה מ"סובלנות דתית" (שהיא חסד של השלטון) ל"חופש מצפון מוחלט" (שהוא זכות טבעית שלא ניתנת לשלילה). שם גם החלה השותפות הפוליטית ההיסטורית שלו עם תומס ג'פרסון.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 5: הקונגרס הקונטיננטלי -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">🏛️</span> הצטרפות לקונגרס הקונטיננטלי
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            מדיסון נבחר לקונגרס הקונטיננטלי בסוף שנת 1779 ותפס את מושבו בפילדלפיה במרץ 1780, בהיותו בן 29 בלבד (הנציג הצעיר ביותר). <strong>כיצד הצטרף?</strong> לאחר עבודתו המבריקה במועצת המושל של וירג'יניה (שם שימש כיועץ קרוב למושלים פטריק הנרי ותומס ג'פרסון), בית המחוקקים של וירג'יניה זיהה את מוסר העבודה החריג והמוח המשפטי יוצא הדופן שלו, ובחר בו לייצג את המדינה בבמה הלאומית. <strong>מדוע?</strong> הקונגרס באותה עת היה במצב של חוסר אונים מוחלט: "תקנון הקונפדרציה" היה חלש, ללא סמכות אמיתית לגבות מסים או לממן את צבאו של ג'ורג' וושינגטון שרעב בשטח. מדיסון נשלח כדי להכניס סדר משפטי למערכת הגוועת, והפך מיד ל"סוס העבודה" המרכזי שניסה להעניק לממשל סמכויות חירום כדי להציל את המהפכה האמריקאית מקריסה כלכלית וצבאית.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 6: דולי מדיסון -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">❤️</span> דולי מדיסון - היכרות ונישואים
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            סיפור היכרותו עם אשתו, דולי פיין טוד (Dolley Payne Todd), נחשב לאחד מסיפורי האהבה הגדולים והחשובים של הפוליטיקה האמריקאית. דולי נולדה בשנת 1768 (ונפטרה ב-1849). <strong>הפרש הגילאים ביניהם היה 17 שנים</strong> (הוא יליד 1751). הם נפגשו בעיר פילדלפיה בשנת 1794. מדיסון היה אז רווק מושבע בן 43, פוליטיקאי מבריק אך ביישן ומופנם מאוד. דולי הייתה אישה צעירה בת 26 ממוצא קווייקרי, שהתאלמנה מבעלה הראשון ואיבדה את בנה הצעיר במגפת קדחת צהובה אכזרית. מי שערך את ההיכרות ביניהם (לבקשתו של מדיסון עצמו, שהוקסם ממנה מרחוק) היה חבר משותף - ארון בר (שלימים הפך לסגן הנשיא שירה בהמילטון). למרות הניגודים החריפים באופיים – הוא הוגה דעות שקט והיא אשת חברה כריזמטית, חמה ומלאת חיים – הם התאהבו במהירות ונישאו בהמשך אותה שנה. דולי הפכה לא רק לאהבת חייו, אלא לנכס הפוליטי העצום ביותר שלו, כשהיא מעצבת בפועל את תפקיד "הגברת הראשונה" ומארחת סלונים פוליטיים שגישרו על פערים מפלגתיים עמוקים.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 7: אידאולוגיה -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">⚖️</span> אידאולוגיה ותפיסת עולם
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            מדיסון, כ"אבי החוקה", עבר תמורה אידאולוגית מרתקת במהלך חייו. תחילה היה לאומן פדרליסטי מובהק שהאמין בממשל מרכזי חזק ויעיל כדי לשמור על האיחוד מפני התפרקות. בהמשך, כשחשש מהריכוזיות ומהמערכת הפיננסית של אלכסנדר המילטון, חבר לחברו הטוב תומס ג'פרסון והקים את המפלגה הדמוקרטית-רפובליקנית שדגלה בזכויות המדינות (States' Rights). תפיסת עולמו הפוליטית והמקורית ביותר התבססה על רעיון "הפלורליזם של פלגים" (כפי שביטא במאמר "פדרליסט 10" המפורסם) – הוא טען בניגוד למקובל באותה תקופה, שדווקא רפובליקה גדולה עם ריבוי עצום של קבוצות אינטרסים וסיעות שונות, תמנע השתלטות של רוב עריץ על המיעוט, שכן אף קבוצה לא תוכל להשיג כוח מוחלט לבדה.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 8: הישגים -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">🏆</span> הישגים היסטוריים מרכזיים
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            מעל לכל, הוא מוכר בהיסטוריה כ"אדריכל הראשי של חוקת ארצות הברית" והוגה מערכת "הבלמים והאיזונים" (Checks and Balances) הגאונית של הממשל האמריקאי, שנועדה למנוע עריצות של כל אחת מהרשויות. יחד עם אלכסנדר המילטון וג'ון ג'יי, כתב את "כתבי הפדרליסט" - טקסט היסוד החשוב ביותר בהיסטוריה הפוליטית של המערב. בנוסף, הוא ניסח והוביל את העברת "מגילת הזכויות" (Bill of Rights) - עשרת התיקונים הראשונים לחוקה המבטיחים את זכויות הפרט. כנשיא (1809-1817), הוא הוביל את ארה"ב ב"מלחמת 1812" נגד האימפריה הבריטית, מלחמה שנודעה כ"מלחמת העצמאות השנייה" וביססה סופית את ריבונותה של ארצות הברית בעולם.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 9: שריפת וושינגטון -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-red-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">🔥</span> שריפת וושינגטון והבית הלבן (1814)
+                        </h3>
+                        <div class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-red-900/40">
+                            <p class="mb-3"><strong class="text-white">הסיבות המדויקות לשריפה:</strong> ב-24 באוגוסט 1814, במהלך "מלחמת 1812", פלשו כוחות בריטיים בפיקודם של מייג'ור-גנרל רוברט רוס ואדמירל ג'ורג' קוקברן לבירה האמריקאית. העילה הישירה לפלישה ולהרס הייתה פעולת תגמול ונקמה: שנה קודם לכן (1813), כוחות אמריקאיים תקפו את יורק (כיום טורונטו), בירת קנדה העילית, ובזזו ושרפו את בנייני הפרלמנט המקומיים. בנוסף למניע הנקמה, הבריטים ביקשו להנחית מכה פסיכולוגית מורלית אנושה על הרפובליקה הצעירה, לשתק את ממשלו של מדיסון ולאלץ את ארצות הברית להיכנע.</p>
+                            <p class="mb-3"><strong class="text-white">השריפה עצמה:</strong> לאחר תבוסה אמריקאית בקרב בלדנסבורג, הצבא והממשל האמריקאי נאלצו לנוס. דולי מדיסון נשארה באחוזה הנשיאותית כמעט עד הרגע האחרון, וחילצה מסמכים ודיוקן מפורסם של ג'ורג' וושינגטון רגע לפני שהבריטים פרצו. הבריטים בזזו את הבניין והעלו אותו באש. הם שרפו גם את הקפיטול וספריית הקונגרס. באופן אירוני ופלאי, למחרת בצהריים פרצה סופת הוריקן נדירה (או טורנדו) שכיבתה את השריפות العظيمות והניסה את הבריטים.</p>
+                            <p><strong class="text-white">השלכות השריפה:</strong> ברמה המיידית, ההרס היה מוחלט. אולם ברמה המורלית, הפעולה הבריטית השיגה את התוצאה ההפוכה: במקום שבירה, התעורר גל חסר תקדים של פטריוטיות שאיחד את האומה. זה הוביל לעמידת הגבורה בקרב בולטימור (שם נכתב ההמנון הלאומי), וסלל את הדרך לניצחון ופתיחת "עידן הרגשות הטובים".</p>
+                        </div>
+                    </section>
+                    
+                    <!-- סעיף 10: בחירתו -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">🗳️</span> הגורם המרכזי לבחירתו לנשיאות
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            מדיסון נבחר לנשיאות בשנת 1808 כמועמד הטבעי, מזכיר המדינה וממשיך דרכו המובהק של ידידו הקרוב, הנשיא היוצא תומס ג'פרסון, מטעם המפלגה הדמוקרטית-רפובליקנית. מורשתו הכבירה והבלתי ניתנת לערעור כ"אבי החוקה", יחד עם ניסיונו הדיפלומטי והפוליטי העשיר (הוא כיהן כמזכיר המדינה של ג'פרסון במשך 8 שנים והיה שותף ל"רכישת לואיזיאנה"), הפכו אותו למועמד המועדף ללא עוררין, בעוד שהמפלגה הפדרליסטית היריבה המשיכה להתפורר ולאבד מהרלוונטיות שלה בקרב הציבור הרחב.
+                        </p>
+                    </section>
+
+                    <!-- סעיף 11: שנותיו המאוחרות -->
+                    <section>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-4 flex items-center bg-gray-950/50 p-3 rounded-xl w-max border border-gray-800/50 shadow-sm">
+                            <span class="ml-3 text-3xl">⏳</span> שנותיו המאוחרות ופטירתו
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed text-lg sm:text-xl text-justify pr-4 border-r-4 border-blue-900/40">
+                            במרץ 1817 סיים מדיסון את כהונתו השנייה ופרש יחד עם דולי לאחוזת מונטפלייר שבווירג'יניה. למרות תהילתו ההיסטורית, ערוב ימיו לווה בטרגדיה כלכלית קשה. בנו החורג, ג'ון פיין טוד, שקע בחובות הימורים ואלכוהול עצומים. מדיסון, בצעד של חמלה אבהית, נאלץ למשכן שוב ושוב את נכסיו ואדמותיו כדי להציל את בנו מהכלא, מה שרושש לחלוטין את המשפחה. ג'יימס מדיסון הלך לעולמו ב-28 ביוני 1836, בגיל 85, עקב אי-ספיקת לב. הוא היה האחרון והמאריך ימים מבין דור "האבות המייסדים". בקשתו האחרונה הייתה להיקבר בחלקת המשפחה באחוזתו בשקט, ללא טקסים ממלכתיים מפוארים.
+                        </p>
+                    </section>
+                    
+                    <!-- מקורות ביבליוגרפיים -->
+                    <div class="mt-16 pt-10 border-t border-gray-800/70">
+                        <h3 class="text-xl font-bold text-gray-400 mb-6 flex items-center">
+                            <span class="ml-2 text-2xl">📚</span> מקורות ביבליוגרפיים (Sources)
+                        </h3>
+                        <div class="text-base text-gray-400 leading-loose font-mono bg-[#020617] p-6 rounded-2xl border border-gray-800 shadow-inner">
+                            <p>1. "ג'יימס מדיסון: ביוגרפיה" (James Madison: A Biography) מאת ראלף קצ'אם.</p>
+                            <p>2. "דולי ומדיסון: יצירתה של האומה האמריקאית" מאת קתרין אולגור.</p>
+                            <p>3. אחוזת מונטפלייר (Montpelier) - האתר ההיסטורי הרשמי.</p>
+                            <p>4. כתבי מדיסון (The Papers of James Madison), אוניברסיטת וירג'יניה וספריית הקונגרס.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+```
